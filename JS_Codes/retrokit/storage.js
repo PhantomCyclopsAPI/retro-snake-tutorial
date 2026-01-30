@@ -1,8 +1,3 @@
-/**
- * retrokit/storage.js
- * 统一的 localStorage 封装，带命名空间和容错
- */
-
 const NAMESPACE = 'retroIndex';
 
 export function save(key, value) {
