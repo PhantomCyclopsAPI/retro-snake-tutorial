@@ -1,15 +1,8 @@
-/**
- * retrokit/theme.js
- * 深浅色主题切换 + Canvas 调色板
- */
-
 import { save, load } from './storage.js';
 
 const THEME_KEY = 'theme';
 let currentTheme = 'light';
 let listeners = [];
-
-// Canvas 用的调色板
 export const palettes = {
   light: {
     canvasBg: 0x0f1c24,
@@ -41,7 +34,6 @@ export function init() {
   currentTheme = saved || (prefersDark ? 'dark' : 'light');
   apply();
   
-  // 监听系统主题变化
   window.matchMedia?.('(prefers-color-scheme: dark)').addEventListener('change', e => {
     if (!load(THEME_KEY)) {
       currentTheme = e.matches ? 'dark' : 'light';
