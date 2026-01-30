@@ -1,7 +1,3 @@
-/**
- * Snake 主题颜色
- */
-
 import { isDark } from '../retrokit/theme.js';
 
 export function getColors() {
