@@ -1,13 +1,9 @@
-/**
- * Snake 游戏配置
- */
-
 export const GRID_SIZE = 20;
 export const TILE_SIZE = 20;
 export const CANVAS_SIZE = GRID_SIZE * TILE_SIZE;
 
 export const FPS_RENDER = 120;
-export const INITIAL_SPEED = 5;           // 格/秒
+export const INITIAL_SPEED = 5;          
 export const MAX_SPEED = 15;
 export const SPEED_INCREMENT = 0.4;
 export const SCORE_PER_SPEEDUP = 2;
