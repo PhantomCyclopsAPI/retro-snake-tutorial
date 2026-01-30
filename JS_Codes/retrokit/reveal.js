@@ -1,8 +1,3 @@
-/**
- * retrokit/reveal.js
- * 卡片滚动进场动画 (IntersectionObserver)
- */
-
 let observer = null;
 
 export function init(selector = '.game-card') {
