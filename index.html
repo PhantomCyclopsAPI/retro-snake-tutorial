@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake - Retro Index Tutorial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="game-page">
+  <nav role="navigation">
+    <ul><li><a href="#" class="active">Snake Tutorial</a></li></ul>
+    <button id="theme-toggle">Toggle Theme</button>
+  </nav>
+  <main>
+    <div class="game-grid">
+      <div class="game-card visible">
+        <div id="hud"><span>Score: <strong id="score">0</strong></span></div>
+        <div id="game-canvas"></div>
+      </div>
+    </div>
+  </main>
+  <script type="module">
+    import { init as initTheme, toggle as toggleTheme } from './JS_Codes/retrokit/theme.js';
+    import { init as initNav } from './JS_Codes/retrokit/nav.js';
+    initTheme();
+    initNav();
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  </script>
+  <script type="module" src="./JS_Codes/snake/game.js"></script>
+</body>
+</html>
